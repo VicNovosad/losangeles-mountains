@@ -50,6 +50,7 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     snowSmall,
     {
+      x: -100,
       y: -movement * 2.1,
     },
     0
@@ -57,6 +58,7 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     snow,
     {
+      x: -100,
       y: -movement * 3.1,
     },
     0
@@ -64,6 +66,7 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     snow2,
     {
+      x: 50,
       y: -movement * 6.1,
     },
     0
@@ -71,6 +74,7 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     snow3,
     {
+      x: -200,
       y: -movement * 8.1,
     },
     0
