@@ -7,7 +7,6 @@
 
 html, body {
     margin: 0;
-    /* width: 100vh; */
 }
 
 section {
@@ -27,38 +26,33 @@ section {
 
 #hero-section{
     background-image: url("./assets/hero-section.jpg");
-    /* height: 100vh; */
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    /* perspective: 300px; */
-    /* background-attachment: fixed; */
-}
-
-.parallax {
-    /* transform-style: preserve-3d; */
-    /* z-index: 1; */
-}
-
-.parallax .text-group{
-    /* transform: translateZ(-600px) scale(3); */
 }
 
 .parallax h1 {
-    /* font-size: 4rem; */
     font-size: clamp(4rem, 4rem + 4.5vw, 12rem);
 }
 
-
-
 #history-section{
-    background-image: url("./assets/section-2.jpg");
+    /* background: url("./assets/section-2.jpg"); */
+}
+
+#history-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url("./assets/section-2.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
 }
 
 #team-section{
     min-height: calc(100vh - 75px);
     height: calc(100vh - 75px);
-
-    /* background-image: url("./assets/tab-1.jpg"); */
 }
 
 /* for tab-navigation */
@@ -94,17 +88,20 @@ section {
     display: grid;
     grid-template-columns: auto auto;
     background-color: rgba(255, 255, 255, .5);
-    /* height: 40px; */
     grid-gap:10px;
 }
 
 .content-body .grid-item {
-  /* background-color: rgba(255, 255, 255, 0.8); */
   font-size: 16px;
   text-align: center;
   height: 20px;
 }
 
+@media only screen and (min-width: 430px){
+    #history-section::before{
+        opacity: 1;
+    }
+}
 @media only screen and (min-width: 1800px){
     #parallax-text {
         top: 44%

@@ -523,6 +523,48 @@ video {
   }
 }
 
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 2280px) {
+  .container {
+    max-width: 2280px;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -706,12 +748,20 @@ video {
   margin-left: 1rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
 
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mr-6 {
+  margin-right: 1.5rem;
 }
 
 .mr-\[15px\] {
@@ -2521,7 +2571,6 @@ video {
 
 html, body {
   margin: 0;
-  /* width: 100vh; */
 }
 
 section {
@@ -2541,35 +2590,33 @@ section {
 
 #hero-section{
   background-image: url("./assets/hero-section.jpg");
-  /* height: 100vh; */
-  /* overflow-x: hidden;
-    overflow-y: hidden; */
-  /* perspective: 300px; */
-  /* background-attachment: fixed; */
-}
-
-.parallax {
-  /* transform-style: preserve-3d; */
-  /* z-index: 1; */
-}
-
-.parallax .text-group{
-  /* transform: translateZ(-600px) scale(3); */
 }
 
 .parallax h1 {
-  /* font-size: 4rem; */
   font-size: clamp(4rem, 4rem + 4.5vw, 12rem);
 }
 
 #history-section{
-  background-image: url("./assets/section-2.jpg");
+  /* background: url("./assets/section-2.jpg"); */
+}
+
+#history-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url("./assets/section-2.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
 }
 
 #team-section{
   min-height: calc(100vh - 75px);
   height: calc(100vh - 75px);
-  /* background-image: url("./assets/tab-1.jpg"); */
 }
 
 /* for tab-navigation */
@@ -2606,15 +2653,19 @@ section {
   display: grid;
   grid-template-columns: auto auto;
   background-color: rgba(255, 255, 255, .5);
-  /* height: 40px; */
   grid-gap:10px;
 }
 
 .content-body .grid-item {
-  /* background-color: rgba(255, 255, 255, 0.8); */
   font-size: 16px;
   text-align: center;
   height: 20px;
+}
+
+@media only screen and (min-width: 430px){
+  #history-section::before{
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 1800px){
@@ -2626,6 +2677,60 @@ section {
 @media only screen and (min-width: 2280px){
   #parallax-text {
     top: 42%
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 530px) {
+    .sm\:container {
+      max-width: 530px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .sm\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sm\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sm\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .sm\:container {
+      max-width: 1536px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .sm\:container {
+      max-width: 1800px;
+    }
+  }
+
+  @media (min-width: 2280px) {
+    .sm\:container {
+      max-width: 2280px;
+    }
   }
 }
 
@@ -2664,37 +2769,59 @@ section {
 }
 
 @media (min-width: 530px) {
-  .phone\:mx-\[75px\] {
+  .tablet\:mx-\[75px\] {
     margin-left: 75px;
     margin-right: 75px;
   }
 
-  .phone\:mt-16 {
+  .tablet\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .tablet\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
+  .tablet\:mt-16 {
     margin-top: 4rem;
   }
 
-  .phone\:flex-row {
+  .tablet\:flex-row {
     flex-direction: row;
   }
 
-  .phone\:items-center {
+  .tablet\:items-center {
     align-items: center;
   }
 
-  .phone\:py-5 {
+  .tablet\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
 
-  .phone\:pl-0 {
+  .tablet\:pl-0 {
     padding-left: 0px;
   }
 
-  .phone\:pt-0 {
+  .tablet\:pt-0 {
     padding-top: 0px;
   }
 
-  .phone\:pt-24 {
+  .tablet\:pt-24 {
     padding-top: 6rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:underline {
+    text-decoration-line: underline;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @media (min-width: 1024px) {
+    .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
+      paint-order: markers;
+    }
   }
 }
