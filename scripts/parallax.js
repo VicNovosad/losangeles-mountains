@@ -66,7 +66,7 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     snow2,
     {
-      x: 50,
+      x: -50,
       y: -movement * 6.1,
     },
     0
