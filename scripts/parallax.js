@@ -5,8 +5,10 @@ gsap.registerPlugin(ScrollTrigger);
   const heroSection = document.querySelector("#hero-section");
   const people = document.querySelector("#parallax-people");
   const mountains = document.querySelector("#parallax-mountains");
+  const snowSmall = document.querySelector("#parallax-snow-small");
   const snow = document.querySelector("#parallax-snow");
   const snow2 = document.querySelector("#parallax-snow-2");
+  const snow3 = document.querySelector("#parallax-snow-3");
   
   const scrubTimeLine = gsap.timeline({
     defaults: {
@@ -24,21 +26,31 @@ gsap.registerPlugin(ScrollTrigger);
   scrubTimeLine.to(
     heroText,
     {
-      y: -movement * 1.5,
+      autoAlpha: 0,
+      scale: 1.18,
+      duration: 0.6,
+      y: -movement * -2.5,
     },
     0
   )
-  .to(
-    people,
-    {
-      y: -movement * .5,
-    },
-    0
-  )
+  // .to(
+  //   people,
+  //   {
+  //     y: -movement * .5,
+  //   },
+  //   0
+  // )
   .to(
     mountains,
     {
-      y: -movement * -.1,
+      y: -movement * -.8,
+    },
+    0
+  )
+  .to(
+    snowSmall,
+    {
+      y: -movement * 2.1,
     },
     0
   )
@@ -53,6 +65,13 @@ gsap.registerPlugin(ScrollTrigger);
     snow2,
     {
       y: -movement * 6.1,
+    },
+    0
+  )
+  .to(
+    snow3,
+    {
+      y: -movement * 8.1,
     },
     0
   )
