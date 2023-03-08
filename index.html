@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SkillTest</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="output.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="carousel.css">
+    </head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__" class="hidden"
+        >
+    <symbol id="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></symbol>
+    </svg>
+    <section id="hero-section" class="relative flex flex-col items-center overflow-hidden">
+        <div class="wrap mt-2 flex justify-center items-center w-full max-w-5xl z-10">
+            <a href="#hero-section" class="flex w-full items-center">
+                <img class="ml-4" src="./assets/logo.png" alt="logo">
+            </a>
+            <nav class="flex mr-2 whitespace-nowrap font-Lato italic font-bold uppercase text-white">
+                <a href="#history-section" class="border-b-2">01. history</a>
+                <a href="#team-section" class="ml-14 border-b-2">02. team</a>
+            </nav>
+        </div>
+
+        <div id="parallax-background" class="absolute top-0 h-full w-full">
+            <img class="object-cover w-full h-full" src="./assets/parallax-backround.jpg" alt="">
+        </div>
+        <div id="parallax-text" class="parallax absolute top-[40%]">
+            <div class="text-group">
+                <div class="wrap">
+                    <h1 class="text-main-gray font-Bebas text-[] leading-[80%]">LOSANGELES</h1>
+                </div>
+                <div class="wrap">
+                    <h1 class="text-main-blue font-Bebas text-[] leading-[80%]">MOUNTAINS</h1>
+                </div>
+            </div>
+        </div>
+        <div id="parallax-people" class="absolute top-0 h-full w-full">
+            <img class="object-cover w-full h-full" src="./assets/parallax-people.png" alt="">
+        </div>
+        <div id="parallax-mountains" class="absolute top-0 h-full w-full">
+            <img class="object-cover w-full h-full" src="./assets/parallax-mountains.png" alt="">
+        </div>
+        <div id="parallax-snow" class="absolute top-0 h-full w-full opacity-50">
+            <img class="object-cover w-full h-full" src="./assets/parallax-snow-2.png" alt="">
+        </div>
+        <div id="parallax-snow-2" class="absolute top-0 h-full w-full opacity-50">
+            <img class="object-cover w-full h-full" src="./assets/parallax-snow-3.png" alt="">
+        </div>
+        
+
+    </section>
+    
+    <section id="history-section" class="relative flex flex-col items-center">
+        <div class="sticky-nav flex w-full justify-center bg-white sticky top-0 z-10">
+            <div class="wrap py-3 flex justify-center items-center w-full max-w-5xl text-main-blue">
+                <a href="#hero-section" class="flex w-full items-center">
+                    <img class="ml-4" src="./assets/logo.png" alt="logo">
+                    <div class="wrap">
+                        <h3 class="ml-3 font-Bebas text-3xl text-main-gray leading-7">LOSANGELES</h3>
+                        <h3 class="ml-3 font-Bebas text-[32px] leading-6">MOUNTAINS</h3>
+                    </div>
+                </a>
+                <nav class="flex flex-col items-end phone:flex-row mr-2 text-main-blue font-Lato italic font-bold uppercase">
+                    <a href="#history-section" class="border-b-2 whitespace-nowrap">01. history</a>
+                    <a href="#team-section" class="ml-14 border-b-2 whitespace-nowrap">02. team</a>
+                </nav>
+            </div>
+        </div>
+        <div class="wrap flex flex-col justify-center items-center w-full max-w-5xl">
+            <div class="flex w-full items-center phone:mt-16 h-[135px] text-[#63769d]">
+                <h1 class="font-Oswald font-bold ml-2 mb-2 text-[135px] opacity-50 leading-[60%]">01.</h1>
+                <div class="translate-x-[-28px] translate-y-[15px]">
+                    <h3 class="font-Bebas text-4xl font-bold text-main-blue leading-7">History</h3>
+                </div>
+            </div>
+            <p class="font-Lato font-light text-lg mx-4 phone:mx-[75px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+        </div>
+        <div class="carousel-container flex justify-center absolute bottom-0 w-full h-[195px] bg-main-blue bg-opacity-50">
+            <div id="carousel-wrap" class="flex justify-center p-6 h-full w-full max-w-[958px]">
+
+                <div class="flex w-full items-start justify-center select-none">
+                    <div class="relative slider h-full w-full overflow-hidden">      
+                        <span class="prev absolute left-4 top-[52px] rounded-full w-8 h-8 flex justify-center items-center z-[2] hover:cursor-pointer bg-[#888] bg-opacity-0 hover:bg-opacity-25">
+                            <svg class="w-5 h-5 text-main-blue transition scale-x-[-1] duration-300" viewBox="0 0 24 24">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
+                        <span class="next absolute right-4 top-[52px] rounded-full w-8 h-8 flex justify-center items-center z-[2] hover:cursor-pointer bg-[#888] bg-opacity-0 hover:bg-opacity-25">
+                            <svg class="w-5 h-5 text-main-blue transition duration-300" viewBox="0 0 24 24">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
+                        
+                        <ul class="flex absolute justify-center items-center top-0 left-[-5px] ">
+                            <li><img src="assets/slide-1.jpg" /></li>
+                            <li><img src="assets/slide-2.jpg" /></li>
+                            <li><img src="assets/slide-1.jpg" /></li>
+                            <li><img src="assets/slide-2.jpg" /></li>
+                            <li><img src="assets/slide-1.jpg" /></li>
+                            <li><img src="assets/slide-2.jpg" /></li>
+                        </ul>
+                    </div>
+                    <div class="navigator absolute flex items-center h-3 bottom-[15px] right-1/2 translate-x-[50%]"></div>
+                </div> 
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="team-section" class="flex flex-col">
+        <div class="container-wrap w-full flex justify-center bg-white">
+            <div class="wrap flex-col pb-5 phone:py-5 flex justify-center items-start w-full max-w-5xl phone:flex-row phone:items-center">
+                <div class="flex items-center h-[135px] text-[#63769d]">
+                    <h1 class="font-Oswald font-bold ml-2 mb-2 text-[135px] opacity-50 leading-[60%]">02.</h1>
+                    <div class="translate-x-[-28px] translate-y-[15px]">
+                        <h3 class="font-Bebas text-4xl font-bold text-main-blue leading-7">Climb</h3>
+                    </div>
+                </div>
+                <p class="font-Lato font-light text-lg pl-4 mr-[15px] phone:pl-0">Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.</p>
+            </div>
+        </div>
+        <div id="tab-container" class="flex flex-col flex-grow items-center justify-center">
+            <nav id="tab-navigator" class="flex items-center justify-center w-full h-10  bg-main-blue text-xl font-Oswald font-bold text-secondary-gray">
+                <ul class="selector flex items-center max-w-5xl w-full h-full bg-gray-200">
+                    <li class="tab flex items-center justify-center px-5 pb-[3px] h-full active hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-1">
+                        <h1>MOUNTAIN 1</h1>
+                    </li>
+                    <li class="tab flex items-center justify-center pb-[3px] px-5 h-full hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-2">
+                        <h1>MOUNTAIN 2</h1>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content w-full h-full">
+                <div id="content-tab-1" class="content-body flex justify-center h-full shirts p-6 pt-8 phone:pt-24 text-left active"> 
+                    <div class="wrap w-full max-w-5xl">
+                        <div class="shelude-container h-[230px] max-w-[350px] min-w-[260px] bg-white" >
+                            <h2 class="py-5 px-7 font-Bebas text-3xl text-main-blue">Schedule</h2>
+                            <div class="grid-container font-Lato text-sm">
+                                <p class="grid-item text-sm">25 Nov 2016</p>
+                                <p class="grid-item">Vestibulum viverra</p>
+                                <p class="grid-item mt-3">28 Nov 2016</p>
+                                <p class="grid-item mt-3">Vestibulum viverra</p>
+                                <p class="grid-item mb-3">18 Dec 2016</p>
+                                <p class="grid-item mb-3">Vestibulum viverra</p>
+                                <p class="grid-item">7 Jan 2017</p>
+                                <p class="grid-item">Vestibulum viverra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content-tab-2" class="content-body flex justify-center h-full pants p-6 pt-8  phone:pt-24 text-left"> 
+                    <div class="wrap w-full max-w-5xl">
+                        <div class="shelude-container h-[230px] 
+                        max-w-[350px] min-w-[260px] bg-white" >
+                            <h2 class="py-5 px-7 font-Bebas text-3xl text-main-blue">Schedule</h2>
+                            <div class="grid-container font-Lato text-sm">
+                                <p class="grid-item text-sm">17 Nov 2016</p>
+                                <p class="grid-item">Vestibulum viverra</p>
+                                <p class="grid-item mt-3">13 Dec 2016</p>
+                                <p class="grid-item mt-3">Vestibulum viverra</p>
+                                <p class="grid-item mb-3">28 Dec 2016</p>
+                                <p class="grid-item mb-3">Vestibulum viverra</p>
+                                <p class="grid-item">9 Feb 2017</p>
+                                <p class="grid-item">Vestibulum viverra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="flex justify-center bg-main-blue min-h-[75px]">
+        <div class="wrap flex flex-col bg-main-blue items-center justify-between phone:flex-row phone:items-center w-full max-w-5xl text-[#63769d]">
+            <a href="#hero-section" class="flex items-center">
+                <img class="ml-4" src="./assets/footer-logo.png" alt="logo">
+                <div class="wrap pt-2 phone:pt-0">
+                    <h3 class="ml-3 font-Bebas text-3xl leading-7">LOSANGELES</h3>
+                    <h3 class="ml-3 font-Bebas text-[32px] leading-6">MOUNTAINS</h3>
+                </div>
+            </a>
+            <h4 class="font-Lato font-bold italic mr-3">COPYRIGHT 2016. ALL RIGHTS RESERVED.</h4>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="scripts/tab-navigator.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/parallax.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://use.typekit.net/vxz4lvk.css");
+
+html, body {
+    margin: 0;
+    /* width: 100vh; */
+}
+
+section {
+    /* font-size: clamp(0.5rem, 0.8rem + 0.5vw, 1.4rem); */
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sticky-header{
+    position: sticky;
+  top: 0;
+}
+
+#hero-section{
+    background-image: url("./assets/hero-section.jpg");
+    /* height: 100vh; */
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    /* perspective: 300px; */
+    /* background-attachment: fixed; */
+}
+
+.parallax {
+    /* transform-style: preserve-3d; */
+    /* z-index: 1; */
+}
+
+.parallax .text-group{
+    /* transform: translateZ(-600px) scale(3); */
+}
+
+.parallax h1 {
+    /* font-size: 4rem; */
+    font-size: clamp(4rem, 4rem + 4.5vw, 12rem);
+}
+
+
+
+#history-section{
+    background-image: url("./assets/section-2.jpg");
+}
+
+#team-section{
+    min-height: calc(100vh - 75px);
+    height: calc(100vh - 75px);
+
+    /* background-image: url("./assets/tab-1.jpg"); */
+}
+
+/* for tab-navigation */
+#tab-container #content-tab-1{
+    background-image: url("./assets/tab-1.jpg");
+}
+
+#tab-container #content-tab-2{
+    background-image: url("./assets/tab-2.jpg");
+}
+
+#tab-container .content-body {
+    display: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tab-container .active {
+    display: flex;
+}
+
+#tab-container .active h1{
+    color: #414f6b;
+    border-bottom: 2px solid #414f6b;
+}
+
+#tab-container .tab.active{
+    background-color: #b0b4be;
+}
+
+.content-body .grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(255, 255, 255, .5);
+    /* height: 40px; */
+    grid-gap:10px;
+}
+
+.content-body .grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  font-size: 16px;
+  text-align: center;
+  height: 20px;
+}
