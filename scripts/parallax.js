@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
   //Parallax Effect
   const heroText = document.querySelector("#hero-section .parallax");
   const heroSection = document.querySelector("#hero-section");
+  const heroSectionNav = document.querySelector("#hero-section .top-panel");
   const people = document.querySelector("#parallax-people");
   const mountains = document.querySelector("#parallax-mountains");
   const snowSmall = document.querySelector("#parallax-snow-small");
@@ -33,13 +34,14 @@ gsap.registerPlugin(ScrollTrigger);
     },
     0
   )
-  // .to(
-  //   people,
-  //   {
-  //     y: -movement * .5,
-  //   },
-  //   0
-  // )
+  .to(
+    heroSectionNav,
+    {
+      y: '1000vh',
+      duration: .4,
+    },
+    0
+  )
   .to(
     mountains,
     {

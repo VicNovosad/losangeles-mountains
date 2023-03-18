@@ -4,9 +4,11 @@
         <title>SkillTest</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="output.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <!-- <link href="output.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="output.css">
         <link rel="stylesheet" href="carousel.css">
+        <link rel="stylesheet" href="accordion.css">
     </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg"
@@ -15,14 +17,16 @@
     <symbol id="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></symbol>
     </svg>
     <section id="hero-section" class="relative flex flex-col items-center overflow-hidden">
-        <div class="wrap mt-2 flex justify-center items-center w-full max-w-5xl z-10">
-            <a href="#hero-section" class="flex w-full items-center">
-                <img class="ml-4" src="./assets/logo.png" alt="logo">
-            </a>
-            <nav class="flex mr-2 whitespace-nowrap font-Lato italic font-bold uppercase text-white">
-                <a href="#history-section" class="border-b-2">01. history</a>
-                <a href="#team-section" class="ml-6 tablet:ml-14 border-b-2">02. team</a>
-            </nav>
+        <div class="top-panel flex justify-center items-center w-full z-10 bg-main-blue">
+            <div class=" wrap my-2 flex items-center justify-center w-full max-w-5xl">
+                <a href="#hero-section" class="flex w-full items-center">
+                    <img class="ml-4" src="./assets/logo.png" alt="logo">
+                </a>
+                <nav class="flex mr-2 whitespace-nowrap uppercase text-2xl font-Bebas font-thin text-white">
+                    <a href="#history-section" class="border-b-2 border-[rgba(255,255,255,0)] hover:border-white">01. history</a>
+                    <a href="#team-section" class="ml-6 tablet:ml-14 border-b-2 border-[rgba(255,255,255,0)] hover:border-white">02. team</a>
+                </nav>
+            </div>
         </div>
 
         <div id="parallax-background" class="absolute top-0 h-full w-full">
@@ -34,10 +38,10 @@
         <div id="parallax-text" class="parallax absolute top-[50%]">
             <div class="text-group">
                 <div class="wrap">
-                    <h1 class="text-main-gray font-Bebas text-[] leading-[80%]">LOSANGELES</h1>
+                    <h1 class="text-main-gray font-Bebas leading-[80%]">LOSANGELES</h1>
                 </div>
                 <div class="wrap">
-                    <h1 class="text-main-blue font-Bebas text-[] leading-[80%]">MOUNTAINS</h1>
+                    <h1 class="text-main-blue font-Bebas leading-[80%]">MOUNTAINS</h1>
                 </div>
             </div>
         </div>
@@ -70,9 +74,9 @@
                         <h3 class="ml-3 font-Bebas text-[32px] leading-6">MOUNTAINS</h3>
                     </div>
                 </a>
-                <nav class="flex flex-col items-end tablet:flex-row mr-6 tablet:mr-2 text-main-blue font-Lato italic font-bold uppercase">
-                    <a href="#history-section" class="border-b-2 whitespace-nowrap">01. history</a>
-                    <a href="#team-section" class="ml-14 border-b-2 whitespace-nowrap">02. team</a>
+                <nav class="flex flex-col items-end tablet:flex-row mr-6 tablet:mr-2 text-main-blue whitespace-nowrap uppercase text-2xl font-Bebas font-thin">
+                    <a href="#history-section" class="border-b-2 whitespace-nowrap border-b-2 border-[rgba(255,255,255,0)] hover:border-main-blue">01. history</a>
+                    <a href="#team-section" class="ml-14 border-b-2 whitespace-nowrap border-b-2 border-[rgba(255,255,255,0)] hover:border-main-blue">02. team</a>
                 </nav>
             </div>
         </div>
@@ -129,19 +133,25 @@
                 <p class="font-Lato font-light text-lg pl-4 mr-[15px] tablet:pl-0">Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.</p>
             </div>
         </div>
-        <div id="tab-container" class="flex flex-col flex-grow items-center justify-center">
-            <nav id="tab-navigator" class="flex items-center justify-center w-full h-10  bg-main-blue text-xl font-Oswald font-bold text-secondary-gray">
+        <div id="tab-container" class="flex flex-col flex-grow items-center justify-start">
+            <nav id="tab-navigator" class="hidden tablet:flex items-center justify-center w-full h-10  bg-main-blue text-xl font-Oswald font-bold text-secondary-gray">
                 <ul class="selector flex items-center max-w-5xl w-full h-full bg-gray-200">
-                    <li class="tab flex items-center justify-center px-5 pb-[3px] h-full active hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-1">
+                    <li class="tab flex items-center justify-center px-5 pb-[3px] h-full active hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-1" data-tab="1">
                         <h1>MOUNTAIN 1</h1>
                     </li>
-                    <li class="tab flex items-center justify-center pb-[3px] px-5 h-full hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-2">
+                    <li class="tab flex items-center justify-center pb-[3px] px-5 h-full hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-2" data-tab="2">
                         <h1>MOUNTAIN 2</h1>
                     </li>
                 </ul>
             </nav>
-            <div class="content w-full h-full">
-                <div id="content-tab-1" class="content-body flex justify-center h-full shirts p-6 pt-8 tablet:pt-24 text-left active"> 
+            <div class="content w-full h-full flex flex-col flex-grow">
+                <ul class="selector flex items-center max-w-5xl w-full h-[38px] bg-main-blue text-xl font-Oswald font-bold text-secondary-gray
+                    tablet:hidden">
+                    <li class="tab flex items-center justify-center px-5 pb-[3px] h-full active hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-1" data-tab="1">
+                        <h1>MOUNTAIN 1</h1>
+                    </li>
+                </ul>
+                <div id="content-tab-1" class="content-body flex flex-grow justify-center shirts p-6 pt-8 tablet:pt-24 text-left active"> 
                     <div class="wrap w-full max-w-5xl">
                         <div class="shelude-container h-[230px] max-w-[350px] min-w-[260px] bg-white" >
                             <h2 class="py-5 px-7 font-Bebas text-3xl text-main-blue">Schedule</h2>
@@ -158,10 +168,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="content-tab-2" class="content-body flex justify-center h-full pants p-6 pt-8  tablet:pt-24 text-left"> 
+                <ul class="selector flex items-center max-w-5xl w-full h-[38px] bg-main-blue text-xl font-Oswald font-bold text-secondary-gray
+                    tablet:hidden">
+                    <li class="tab flex items-center justify-center px-5 pb-[3px] h-full hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-2" data-tab="2">
+                        <h1>MOUNTAIN 2</h1>
+                    </li>
+                </ul>
+                <div id="content-tab-2" class="content-body flex flex-grow justify-center pants p-6 pt-8  tablet:pt-24 text-left"> 
                     <div class="wrap w-full max-w-5xl">
                         <div class="shelude-container h-[230px] 
-                        max-w-[350px] min-w-[260px] bg-white" >
+                                    max-w-[350px] min-w-[260px] bg-white" >
                             <h2 class="py-5 px-7 font-Bebas text-3xl text-main-blue">Schedule</h2>
                             <div class="grid-container font-Lato text-sm">
                                 <p class="grid-item text-sm">17 Nov 2016</p>
@@ -179,6 +195,31 @@
             </div>
         </div>
     </section>
+
+<!-- 
+    <article class="tabbed-content">
+        <nav class="tabs">
+          <ul>
+            <li><a href="#tab1" class="active">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+          </ul>
+        </nav>
+        <section id="tab1" class="item active" data-title="Tab 1">
+          <div id="content-tab-1 item-content" class="
+          "> 
+          <p>content for Tab1</p>
+          
+          </div>
+        </section>
+        <section id="tab2" class="item" data-title="Tab 2">
+          <div id="content-tab-2 item-content" class=""> 
+            <p>content for Tab2</p>
+    
+          </div>
+        </section>
+        
+      </article> -->
+
 
     <footer class="flex justify-center bg-main-blue min-h-[75px]">
         <div class="wrap flex flex-col bg-main-blue items-center justify-between tablet:flex-row tablet:items-center w-full max-w-5xl text-[#63769d]">
@@ -198,6 +239,7 @@
     <script src="scripts/tab-navigator.js"></script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/parallax.js"></script>
+    <script src="scripts/accordion.js"></script>
 
 </body>
 

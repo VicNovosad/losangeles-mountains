@@ -4,5 +4,9 @@
   },
   "dependencies": {
     "jquery": "^3.6.4"
+  },
+  "scripts": {
+    "build": "tailwindcss -i styles.css -o output.css",
+    "watch": "tailwindcss -i styles.css -o output.css --watch"
   }
 }

@@ -21,7 +21,7 @@ section {
 
 .sticky-header{
     position: sticky;
-  top: 0;
+    top: 0;
 }
 
 #hero-section{
@@ -52,12 +52,17 @@ section {
 
 #team-section{
     min-height: calc(100vh - 75px);
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
+    /* height: auto; */
+    flex-grow: 1;
+    /* min-height: initial; */
 }
 
 /* for tab-navigation */
 #tab-container #content-tab-1{
     background-image: url("./assets/tab-1.jpg");
+    /* height: 0; */
+    /* padding: 0; */
 }
 
 #tab-container #content-tab-2{
@@ -65,14 +70,28 @@ section {
 }
 
 #tab-container .content-body {
-    display: none;
+    /* display: none; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: calc(100% - 75px);
+}
+
+#tab-container {
+    /* height: 0 !important; */
+    /* flex-grow: 0; */
+}
+
+
+#tab-container .active {
+    /* height: 0 !important; */
 }
 
 #tab-container .active {
     display: flex;
+    /* height: 100% !important; */
+    /* height: calc(100% - 75px); */
+    transition: all .3s ease-in-out;
 }
 
 #tab-container .active h1{
@@ -97,9 +116,23 @@ section {
   height: 20px;
 }
 
+.content .selector.bg-gray{
+    background-color: #b0b4be;
+}
+
 @media only screen and (min-width: 430px){
     #history-section::before{
         opacity: 1;
+    }
+}
+@media only screen and (min-width: 530px){
+    #tab-container .content-body {
+        height: 100%;
+    }
+    
+    #tab-container .active {
+        height: 100%;
+        /* height: calc(100% - 75px); */
     }
 }
 @media only screen and (min-width: 1800px){
