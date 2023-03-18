@@ -1,9 +1,9 @@
 function animation(){
     gsap.timeline()
-        .to(".content-body.active", {
-            display: "flex",
-            duration: 0
-        })
+        // .to(".content-body.active", {
+        //     display: "flex",
+        //     duration: 0
+        // })
         .to(".content-body:not(.active)", {
             height: "0vh",
             flexGrow: 0,
@@ -20,10 +20,10 @@ function animation(){
             duration: 0,
             ease: "power1.inOut"
         }, "<")
-        .to(".content-body:not(.active)", {
-            display: "none",
-            duration: 0
-        })
+        // .to(".content-body:not(.active)", {
+        //     display: "none",
+        //     duration: 0
+        // })
 }
 
 function addTabNavigation(){

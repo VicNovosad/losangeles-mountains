@@ -102,6 +102,9 @@ section {
 #tab-container .tab.active{
     background-color: #b0b4be;
 }
+/* #tab-container .content{
+    overflow: hidden;
+} */
 
 .content-body .grid-container{
     display: grid;

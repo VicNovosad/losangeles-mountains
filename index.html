@@ -4,11 +4,9 @@
         <title>SkillTest</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="output.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="output.css">
         <link rel="stylesheet" href="carousel.css">
-        <link rel="stylesheet" href="accordion.css">
     </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +142,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="content w-full h-full flex flex-col flex-grow">
+            <div class="content w-full h-full flex flex-col flex-grow overflow-hidden">
                 <ul class="selector flex items-center max-w-5xl w-full h-[38px] bg-main-blue text-xl font-Oswald font-bold text-secondary-gray
                     tablet:hidden">
                     <li class="tab flex items-center justify-center px-5 pb-[3px] h-full active hover:opacity-70 cursor-pointer duration-300 transition" data-id="content-tab-1" data-tab="1">
@@ -196,31 +194,6 @@
         </div>
     </section>
 
-<!-- 
-    <article class="tabbed-content">
-        <nav class="tabs">
-          <ul>
-            <li><a href="#tab1" class="active">Tab 1</a></li>
-            <li><a href="#tab2">Tab 2</a></li>
-          </ul>
-        </nav>
-        <section id="tab1" class="item active" data-title="Tab 1">
-          <div id="content-tab-1 item-content" class="
-          "> 
-          <p>content for Tab1</p>
-          
-          </div>
-        </section>
-        <section id="tab2" class="item" data-title="Tab 2">
-          <div id="content-tab-2 item-content" class=""> 
-            <p>content for Tab2</p>
-    
-          </div>
-        </section>
-        
-      </article> -->
-
-
     <footer class="flex justify-center bg-main-blue min-h-[75px]">
         <div class="wrap flex flex-col bg-main-blue items-center justify-between tablet:flex-row tablet:items-center w-full max-w-5xl text-[#63769d]">
             <a href="#hero-section" class="flex items-center">
@@ -239,7 +212,6 @@
     <script src="scripts/tab-navigator.js"></script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/parallax.js"></script>
-    <script src="scripts/accordion.js"></script>
 
 </body>
 
