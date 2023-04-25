@@ -37,7 +37,8 @@ gsap.registerPlugin(ScrollTrigger);
   .to(
     heroSectionNav,
     {
-      y: '1000vh',
+      y: '50vh',
+      // autoAlpha: 0,
       duration: .4,
     },
     0
